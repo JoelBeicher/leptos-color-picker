@@ -1,0 +1,20 @@
+[package]
+name = "leptos-color-picker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+leptos = { version = "0.7", features = ["csr"] }
+leptos_meta = { version = "0.7", default-features = true }
+leptos-use = "0.15"
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["console"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
